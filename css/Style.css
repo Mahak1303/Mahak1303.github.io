@@ -1,0 +1,541 @@
+
+html, body {
+    margin: 0%; 
+    box-sizing: border-box; /* this makes the padding and border included with the width and height*/
+    overflow-x: hidden; /* this makes sure that when the content overflows horizontally, it stayes hidden*/
+    scroll-behavior: smooth; /* makes anchor links scroll down */
+}
+
+:root{ /* these are how you create variables */
+    /* Theme colors */
+    --text-gray: #3f4954; /* these are hex colors */
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /* Gradient Color */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+}
+
+span{
+    font-family: 'Abel', sans-serif;
+}
+
+.container{
+    margin: 0.5vw;
+}
+/* ---------------- Global Classes ---------------- */
+
+a {
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row{
+    display: flex; /* this makes the display flex so we can use the flex properties and align all the properties horizontally*/
+    flex-direction: row; /* this makes the divs in the flex-row class all horizontal */
+    flex-wrap: wrap; /* this makes it so when you change the size of the page, thhe divs in the flex-row class will stick together and if they don't fit horizontally, they will go down */
+}
+
+ul{
+    list-style-type: none; /* makes the bullet points and other styles in the list go away */
+}
+
+h1{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 2.5rem;
+}
+
+h3{
+    font-family: 'Abel', sans-serif;
+    font-size: 2.5rem;
+}
+
+h2{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: 'Livvic', sans-serif;
+    cursor: pointer;
+}
+
+.text-gray{
+    color: var(--text-gray);
+}
+
+p{
+    font-family: 'Lexend', sans-serif;
+    color: var(--text-light);
+}
+/* -------x--------- Global Classes -------x--------- */
+
+
+
+/* ---------------- navbar ---------------- */
+
+.nav{
+    background: white;
+    padding: 0.2rem; /* rem stands for 'the root element's font-size' */
+    height: 0rem;
+    min-height: 10vh; /* this makes it so the nav section is atleast 40% of the viewport (visible area of a web page) height */
+    overflow: hidden; /* this makes sure that when the content overflows, it stayes hidden*/
+    transition: height 1s ease-in-out; /* makes the items in the toggle menu come with an effect */
+
+}
+
+.nav .nav-menu{
+    justify-content: space-between; /* spaces out the distance between the divs inside the nav-menue class equally */
+}
+
+.nav .toggle-collapse{
+    position: absolute; /* The element is positioned relative to its first positioned (not static) ancestor element */
+    top: 0%;
+    width: 90%;
+    cursor: pointer; /* changes the cursor style to pointer hand */
+    display: none; /* will hide the menu icon */
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray)
+}
+
+.collapse{
+    height: 30rem;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem /* top and bottom */ 1rem; /* left and right */
+    font-size: 1.1rem;
+    position: relative; /* allow it to be adjusted away from its normal positions */ 
+    font-family: 'Abel', sans-serif;
+    font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: #5077be;
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: var(--white);
+}
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block; /* makes the element display as a block; has somewhitespace and alowes no HTML element next to it unless declared */
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.6rem;
+}
+
+.nav .social{
+    padding: 1.4rem 0;
+}
+
+.nav .social i{
+    padding: 0.2rem;
+}
+
+.nav .social i:hover{
+    color: #a1c4cf;
+}
+
+/* --------x-------- navbar ---------x------- */
+
+
+/* -------------- Main Site Section --------------- */
+
+
+
+/* ----------- Site Title ------------- --> */
+
+.site-title{ /* why is main.site-title not working? */
+    background: url(../assets/Background-image.png); /* ../ refers to the root directory */
+    background-size: cover; /* makes the background (lenght in our case) fit the whole area */
+    height: 110vh; /* makes the length of this section longer so that the background can show */
+    display: flex;
+    justify-content: center; /* if you do this line of code without writing display: flex first, it won't work */
+}
+
+.site-title .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.site-title .site-title h1, h3{
+    margin: .3rem;
+}
+
+.site-title .btn{
+    margin: 1.8rem;
+    background: var(--sky);
+}
+
+.site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+/* ------x----- Site Title -------x------ */
+
+/* ----------- Blog Carousel ------------- */
+
+.blog{
+    background: url('../assets/Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 115vh;
+    width: 100%;
+    background-size: 65%;
+}
+
+.blog .blog-post{
+    padding-top: 6rem;
+}
+
+.blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+}
+
+.blog-content .blog-title{
+    padding: 2rem 0;
+}
+
+.blog-content .btn-blog{
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: 5rem;
+}
+
+.blog-content span{
+    display: block;
+}
+
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 0 auto; /* auto centers the arrows */
+    width: 100%
+}
+
+.owl-nav .owl-prev .owl-nav-prev, .owl-nav .owl-next .owl-nav-next{
+    color: var(--text-gray);
+    background: transparent;
+    font-size: 2rem;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{ /* [class*='owl-'] specifies any class that starts with owl- */
+    background: transparent;
+    color: var(--midnight);
+}
+
+.owl-theme .owl-nav [class*='owl-']{
+    outline: none; /*makes the border of the arrows go away */
+}
+/* ------x----- Blog Carousel -------x------ */
+
+/* -------------- Site Content --------------- */
+
+.site-content{
+    display: grid; /* layout set to grid so can use all grid features */
+    grid-template-columns: 70% 30%;
+}
+
+.post-content{ 
+    width: 100%;
+}
+
+.site-content .post-content > .post-image, .post-title{
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.site-content .post-content > .post-image .post-info{
+    background: var(--sky);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0%;
+    left: 20vw;
+    border-radius: 3rem;
+}
+
+.site-content > .post-image > div{
+    overflow: hidden;
+}
+
+.site-content .post-content > .post-image .img{
+    width: 100%;
+    transition: all 1s ease;
+}
+
+.site-content .post-content > .post-image .img:hover{
+    transform: scale(1.3);
+}
+
+.site-content .post-content > .post-image .post-info span{
+    margin: 0.5rem;
+}
+
+.post-content .post-title a{
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+}
+
+.site-content .post-content .post-title .post-btn{
+    border-radius: 0;
+    padding: .7rem 1.5rem;
+    background: var(--sky);
+}
+
+.site-content .pagination{
+    justify-content: center;
+    color: var(--text-gray);
+    margin: 4rem 0;
+}
+
+.site-content .pagination a{
+    padding: .6rem .9rem;
+    border-radius: 2rem;
+    margin: 0.3rem;
+    font-family: 'Lexend', sans-serif;
+}
+
+.site-content .pagination .pages{
+    background: var(--text-gray);
+    color: var(--white);
+}
+
+/* --------x------ Site Content -------x-------- */
+
+/* -------------- Side Bar --------------- */
+
+.site-content > .sidebar .category-list{
+    font-family: 'Livvic', sans-serif;
+}
+
+.site-content > .sidebar .category-list .list-items{
+    background: var(--sky);
+    padding: .4rem 1rem;
+    margin: .8rem 0;
+    border-radius: 3rem;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-content > .sidebar .category-list .list-items a{
+    color: black;
+}
+
+.site-content .sidebar .popular-post .post-content{
+    padding: 1rem 0;
+}
+
+.site-content .sidebar .popular-post h2{
+    padding-top: 8rem;
+}
+
+.site-content .sidebar .popular-post .post-info{
+    padding: .4rem .1rem !important;
+    bottom: 0rem !important;
+    left: 1.5rem !important;
+    border-radius: 0rem !important;
+    background: white !important;
+}
+
+.site-content .sidebar .popular-post .post-title a{
+    font-size: 1rem;
+}
+
+.site-content .sidebar .newsletter{
+    padding-top: 10rem;
+
+}
+
+.site-content .sidebar .newsletter .form-element{
+    padding: 5rem 2rem;
+}
+
+.site-content .sidebar .newsletter .input-element{
+    width: 80%;
+    height: 1.9rem;
+    padding: .3rem .5rem;
+    font-family: 'Lexend', sans-serif;
+    font-size: 1rem;
+}
+
+.site-content .sidebar .newsletter .form-btn{
+    border-radius: 0;
+    padding: .8rem 32%;
+    margin: 1rem 0;
+    background: var(--sky);
+}
+
+.site-content .sidebar .popular-tags{
+    padding: 5rem 0;
+}
+
+.site-content .sidebar .popular-tags .tag{
+    background: var(--sky);
+    padding: .4rem 1rem;
+    border-radius: 3rem;
+    margin: .4rem .6rem;
+}
+/* --------x------ Side Bar -------x-------- */
+
+/* --------x------ Main Site Section -------x-------- */
+
+/* -------------- Footer --------------- */
+
+footer.footer{
+    height: 100%;
+    background: var(--bg-color);
+    position: relative;
+}
+
+footer.footer .container{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr); /* creates four equal with columns */
+}
+
+footer.footer .container > div{
+    flex-grow: 1; /* flex item can grow up to 1 */
+    flex-basis: 0; /*the inintial width of the flex item is 0 */
+    padding: 3rem .9rem;
+}
+
+footer.footer .container h2{
+    color: var(--white);
+}
+
+footer.footer .container .newsletter .form-element{
+    background: black;
+    display: inline-block;
+}
+
+footer.footer .container .newsletter .form-element input{
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: 'Josefin', sans-serif;
+    font-size: 1rem;
+    width: 74%;
+}
+
+footer.footer .newsletter .form-element i{
+    background: var(--sky);
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+
+footer.footer .instagram div > img{
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
+
+footer.footer .follow div i{
+    color: var(--white);
+    padding: 0.4rem;
+}
+
+footer.footer .rights{
+    color: var(--white);
+    justify-content: center;
+}
+
+footer.footer .go-up i{
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    right: 6%;
+    top: 50%; 
+}
+
+footer.footer .go-up i:hover{
+    color: var(--text-gray);
+}
+
+/* --------x------ Footer -------x-------- */
+
+/*      Viewport less than or equal to 1130px       */
+@media only screen and (max-width: 1130px){
+    .site-content .post-content > .post-image .post-info{
+        left: 2rem !important;
+        bottom: 1.2rem !important;
+        border-radius: 0% !important;
+    }
+
+    .site-content .sidebar .popular-post .post-info{
+        display: none !important;
+    }
+
+    footer.footer .container{
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/*   x   Viewport less than or equal to 1130px    x   */
+
+/*      Viewport less than or equal to 750px       */
+
+@media only screen and (max-width: 750px){ /*changes the layout if less than or equal to 750px*/
+    .nav .nav-menu, .nav .nav-items{ 
+        flex-direction: column; /* change nav divs layout to vertical */
+    }
+
+    .nav .toggle-collapse{
+        display: initial; /* will show the menu icon */
+    }
+
+    .site-content{
+        grid-template-columns: 100%;
+    }
+
+    footer.footer.container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/*   x   Viewport less than or equal to 750px    x   */
+
+/*      Viewport less than or equal to 520px       */
+
+@media only screen and (max-width: 520px){
+    .blog{
+        height: 125vh;
+    }
+
+    .site-content .post-content > .post-image .post-info{
+        display: none;
+    }
+}
+
+/*    x  Viewport less than or equal to 520px    x   */

@@ -1,0 +1,933 @@
+/* ---------------- navbar ---------------- */
+
+.nav a{
+    text-decoration: none;
+    color: var(--text-gray)
+}
+
+.nav ul{
+    list-style-type: none; /* makes the bullet points and other styles in the list go away */
+}
+
+
+.nav{
+    background: white;
+    padding: 0.2rem; /* rem stands for 'the root element's font-size' */
+    height: 0rem;
+    min-height: 10vh; /* this makes it so the nav section is atleast 40% of the viewport (visible area of a web page) height */
+    overflow: hidden; /* this makes sure that when the content overflows, it stayes hidden*/
+    transition: height 1s ease-in-out; /* makes the items in the toggle menu come with an effect */
+
+}
+
+.nav .nav-menu{
+    justify-content: space-between; /* spaces out the distance between the divs inside the nav-menue class equally */
+}
+
+.nav .toggle-collapse{
+    position: absolute; /* The element is positioned relative to its first positioned (not static) ancestor element */
+    top: 0%;
+    width: 90%;
+    cursor: pointer; /* changes the cursor style to pointer hand */
+    display: none; /* will hide the menu icon */
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray)
+}
+
+.collapse{
+    height: 30rem;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem /* top and bottom */ 1rem; /* left and right */
+    font-size: 1.1rem;
+    position: relative; /* allow it to be adjusted away from its normal positions */ 
+    font-family: 'Abel', sans-serif;
+    font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: #5077be;
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: var(--white);
+}
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block; /* makes the element display as a block; has somewhitespace and alowes no HTML element next to it unless declared */
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.6rem;
+}
+
+.nav .mainsocial{
+    padding: 1.4rem 0;
+}
+
+.nav .mainsocial i{
+    padding: 0.2rem;
+}
+
+.nav .mainsocial i:hover{
+    color: #a1c4cf;
+}
+
+.maintext-gray{
+    color: #3f4954;
+}
+
+.mainflex-row{
+    display: flex; /* this makes the display flex so we can use the flex properties and align all the properties horizontally*/
+    flex-direction: row; /* this makes the divs in the flex-row class all horizontal */
+    flex-wrap: wrap; /* this makes it so when you change the size of the page, thhe divs in the flex-row class will stick together and if they don't fit horizontally, they will go down */
+}
+
+/* --------x-------- navbar ---------x------- */
+
+:root{
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+}
+
+body{
+    /* background-image: url(../img/bg-body.jpg); */
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+/* aligns caption to center */
+.mfp-title {
+    text-align: center;
+    padding: 6px 0;
+  }
+  
+  p,
+  ul,
+  li,
+  ol {
+      padding: 0px;
+      margin: 0px;
+      font-family: 'Roboto', sans-serif;
+  }
+  h1
+  h2,
+  h3,
+  h4,
+  h5{font-family: 'Oswald', sans-serif!important;}
+  .no-margin {
+      margin: 0px;
+  }
+  .no-padding {
+      padding: 0px;
+  }
+
+#container{
+    margin: 0 auto;
+    width: 860px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#content{
+    background-color: whitesmoke;
+}
+
+#profile{
+    background: var(--sky);
+    background-position: center bottom;
+    overflow: hidden;
+    background-repeat: repeat-x;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+.about{
+    float: left;
+    margin-top: 30px;
+    width: 490px;
+    margin-left: 20px;
+}
+
+.about .photo-inner{
+    float: left;
+    background: url(../img/photo-inner.png) no-repeat;
+    width: 214px;
+    height: 180px;
+    padding: 12px 0 0 19px;
+}
+
+.about .photo-inner img{
+    height: auto;
+    width: 153px;
+}
+
+.about h1{
+    font-weight: 900;
+    color: white;
+    line-height: 34px;
+    margin-top: 8px;
+    margin-left: -20px;
+}
+
+.about h3{
+    margin-top: 5px;
+    font-size: 18px;
+    color: white;
+    line-height: 18px;
+    font-weight: 'Oswald', sans-serif;
+}
+
+.about p{
+    font-size: 14px;
+    margin-top: 15px;
+    color: white;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.personal-info{
+    float: left;
+    margin-top: 30px;
+    width: 310px;
+    min-width: 230px;
+    margin-left: 10px;
+    background: url(../img/personal-info-sep.png) no-repeat;
+    padding: 20px 0 19px 20px;
+}
+
+.personal-info li{
+    line-height: 12px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    float: left;
+    width: 293px;
+}
+
+.personal-info li label{
+    color: white;
+    float: left;
+    padding: 4px 7px;
+    font-weight: 550;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.personal-info li span{
+    float: right;
+    width: 220px;
+    padding-top: 4px;
+    font-weight: 400;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.header{
+    position: relative;
+    overflow: visible;
+}
+
+span.socials-text{
+    position: absolute;
+    right: 0px;
+    color: whitesmoke;
+    padding: 2px 9px;
+    font-size: 22px;
+    cursor: pointer;
+    top: 100px;
+    border-radius: 70px;
+}
+
+i.fa.fa-share{
+    color: white !important;
+} 
+
+ul.socialicons{
+    opacity: 0;
+    top: -1px;
+    position: relative;
+    transition: all ease 1s;
+    z-index: -1;
+    left: -7px;
+}
+
+.pulse-button{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    line-height: 15px;
+    border: none;
+    box-shadow: 0 0 0 0 rgb(101, 100, 100);
+    background-color: #a1c4fd;
+    cursor: pointer;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.menu{
+    height: 100px;
+    background-color: #efeded;
+    position: relative;
+    padding-left: 130px;
+    padding-right: 130px;
+}
+
+.tabs{
+    height: 117px;
+    position: absolute;
+    margin-top: -14px;
+    z-index: 100;
+}
+
+.tabs div{
+    text-decoration: none;
+}
+
+.tabs div > a{
+    padding-top: 28px;
+    width: 115px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    font-size: 15px;
+    color: #989c9e;
+    text-align: center;
+    font-weight: 580;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 35px;
+    text-decoration: none;
+    margin-right: 35px;
+}
+
+.tabs .tmenu{
+    display: inline-block;
+}
+
+.tabs div.active{
+    background: url(../img/tab-hover.png) no-repeat;
+}
+
+.tabs div.active a{
+    color: #5077be;
+}
+
+.custom{
+    font-size: 45px;
+    display: block;
+    margin-bottom: 5px;
+     
+}
+
+#logo{
+    float: left;
+    overflow: hidden;
+    margin-left: 10px;
+    display: none;
+}
+
+#logo h4{
+    color: #555;
+    line-height: 20px;
+    font-family: 'Oswarld', sans-serif;
+    font-size: 20px;
+    margin-left: 7px;
+}
+
+/* creates bounce */
+
+a.tab-profile.active i{
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce{
+    0%, 20%, 50%, 80%, 100%{
+        transform: translateY(0);
+    }
+
+    40%{
+        transform: translateY(-0px);
+    }
+
+    40%{
+        transform: translateY(-10px);
+    }
+}
+
+#portfolio{
+    padding: 31px;
+}
+
+#portfolio-list{
+    width: 820px;
+    overflow: hidden;
+}
+
+#portfolio-list li{ 
+    float: left;
+    margin-right: 25px;
+    text-align: center;
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #5077be;
+    height: 185px;
+    margin-bottom: 30px;
+    width: 180px;
+}
+
+#portfolio-list li:hover{
+    border-bottom: 1px solid #5077be;
+    height: 185px;
+}
+
+#portfolio-list img{
+    background-color: white;
+    height: 120px;
+    width: 185px;
+}
+
+#portfolio-list li:hover .title{
+    color: #5077be;
+}
+
+#portfolio-list li .title{
+    font-size: 14px;
+    margin-top: 15px;
+    font-weight: 400;
+    color: #3a3a3a;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#portfolio-list li .categories{
+    font-size: 11px;
+    line-height: 25px;
+    color: #999;
+}
+
+.cats-filter{
+    border-bottom: 1px solid #ededed;
+    overflow: hidden;
+    padding: 15px 0;
+}
+
+.cats-filter li a{
+    float: left;
+    margin-right: 7px;
+    color: #5077be;
+    padding: 10px 10px;
+    margin-bottom: 5px;
+    font-size: 19px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+
+.cats-filter li a:hover{
+    text-decoration: none;
+}
+
+.cats-filter li a .current{
+    text-decoration: none;
+    background-color: #5077be;
+}
+
+.extra-text{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #333 !important;
+    font-size: 12px;
+}
+
+/* -------------- Footer --------------- */
+
+footer.footer{
+    height: 100%;
+    background: var(--bg-color);
+    position: relative;
+}
+
+footer.footer .container{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr); /* creates four equal with columns */
+}
+
+footer.footer .container > div{
+    flex-grow: 1; /* flex item can grow up to 1 */
+    flex-basis: 0; /*the inintial width of the flex item is 0 */
+    padding: 3rem .9rem;
+}
+
+footer.footer .container h2{
+    color: var(--white);
+}
+
+footer.footer .container .newsletter .form-element{
+    background: black;
+    display: inline-block;
+}
+
+footer.footer .container .newsletter .form-element input{
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: 'Josefin', sans-serif;
+    font-size: 1rem;
+    width: 74%;
+}
+
+footer.footer .newsletter .form-element i{
+    background: var(--sky);
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+
+footer.footer div.form-element{
+    font: 16px 'Times' !important;
+}
+
+footer.footer .instagram div > img{
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
+
+footer.footer .follow div i{
+    color: var(--white);
+    padding: 0.4rem;
+}
+
+footer.footer .rights{
+    color: var(--white);
+    justify-content: center;
+    font-family: 'Times';
+    font-size: 16px !important; /* this code isn't working */
+}
+
+.flex-row{
+    display: flex; /* this makes the display flex so we can use the flex properties and align all the properties horizontally*/
+    flex-direction: row; /* this makes the divs in the flex-row class all horizontal */
+    flex-wrap: wrap; /* this makes it so when you change the size of the page, thhe divs in the flex-row class will stick together and if they don't fit horizontally, they will go down */
+}
+
+footer.footer .go-up i{
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    right: 6%;
+    top: 50%; 
+}
+
+footer.footer .go-up i:hover{
+    color: var(--text-gray);
+}
+
+:root{ /* these are how you create variables */
+    /* Theme colors */
+    --text-gray: #3f4954; /* these are hex colors */
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /* Gradient Color */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+}
+
+span{
+    font-family: 'Abel', sans-serif;
+}
+
+.footer .container{
+    margin: 0.5vw;
+}
+
+.footer .text-gray{
+    color: var(--text-gray);
+}
+
+.footer p{
+    font-family: 'Lexend', sans-serif;
+    color: var(--text-light);
+}
+
+@media only screen and (max-width: 1130px){
+
+    footer.footer .container{
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media only screen and (max-width: 750px){ 
+    
+    footer.footer.container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* --------x------ Footer -------x-------- */
+
+/*      Viewport less than or equal to 1130px       */
+@media only screen and (max-width: 1130px){
+    footer.footer .container{
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/*   x   Viewport less than or equal to 1130px    x   */
+
+/*      Viewport less than or equal to 750px       */
+
+@media only screen and (max-width: 750px){ /*changes the layout if less than or equal to 750px*/
+    .nav .nav-menu, .nav .nav-items{ 
+        flex-direction: column; /* change nav divs layout to vertical */
+    }
+
+    .nav .maintoggle-collapse{
+        display: initial; /* will show the menu icon */
+    }
+
+    footer.footer.container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*@media only screen and (max-width: 900px) {
+    #content{
+        width: 50%;
+    }
+}*/
+
+
+/*   x   Viewport less than or equal to 750px    x   */
+
+
+.site-main .site-banner h3{
+    padding-top: 35%;
+    font-weight: 500;
+}
+
+.site-main .site-banner h3::after{ /*inserts the content text after whatever you select */
+    content: " ";
+    height: 2px;
+    width: 18vw;
+    background: black;
+    display: inline-block;
+    margin-left: 5%;
+    transform: translateY(-10px);
+}
+
+.site-main .site-banner .site-title h1{
+    font-size: 5rem;
+}
+
+.site-main .site-banner .site-title h4{
+    font-size: 1.5rem;
+}
+
+.site-main .site-banner .banner-image > img{
+    padding: 0rem 5rem;
+    width: 90rem;
+}
+
+
+.banner-image{
+    width: 550px;
+    height: auto;
+}
+
+/* end banner area */
+
+/* start about area */
+
+.site-main .about-area{
+    padding: 8rem 5rem;
+}
+
+.site-main .about-area .about-title h2 > span{
+    display: block;
+    font: normal bold 49px/ 60px 'Roboto';
+    letter-spacing: 21px;
+}
+
+.site-main .about-area .about-title .paragraph > p{
+    padding: .4rem 0;
+}
+
+.site-main .brand-area{
+    padding: 1rem 5rem; /* when I increase the rem, the distance decreases ?*/
+    margin-bottom: 4rem;
+}
+
+.site-main .brand-area .firstrow .col-lg-4{
+    display: flex;
+    justify-content: center;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand{ 
+    border: 1px solid var(--border-color);
+    text-align: center;
+    padding: 1.8rem 0rem;
+    margin: .9rem 0;  /* when I increase the rem, the distance decreases ?*/
+    width: 180px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform .4s ease;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand > img{
+    width: 50%;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand > img:hover{
+    transform: scale(1.3);
+    transition: transform .4s ease-out;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand:hover > img{
+    filter: brightness(0.15);
+}
+
+.site-main .brand-area .experience-area{
+    padding-left: 1rem;
+}
+
+.site-main .brand-area .experience-area span{
+    display: block;
+}
+
+.site-main .brand-area .experience-area .years-area{
+    background: url(../img/client-info-bg.png) no-repeat 45px 20px;
+    padding: 2rem 0;
+    width: 40rem;
+    height: 18rem;
+    padding-left: 8rem;
+    position: relative;
+}
+
+.site-main .brand-area .experience-area .bg-panel{
+    position: absolute;
+    left: -190px; top: 0%;
+    background: #e029290a;
+    width: 400px;
+    height: 400px;
+    margin-left: 340px;
+    z-index: -1;
+}
+
+.site-main .brand-area .experience-area .years-area .years{
+    font: normal bold 84px/40px 'Roboto';
+    color: var(--primary-color2);
+    z-index: 2;
+}
+
+.site-main .brand-area .experience-area .years-area h2 >span{
+    font: normal 600 22px/30px 'Roboto';
+}
+
+.site-main .brand-area .experience-area .call-area{
+    padding-left: 10rem;
+}
+
+/* end brand area */
+
+/* start services area */
+
+.site-main .services-area{
+    padding: 7rem 2rem;
+}
+
+.site-main .services-area .services-title{
+    padding: 0 14rem;
+}
+
+.site-main .services-area .services-title h1{
+    font-size: 35px;
+}
+
+.site-main > .services-area .services{
+    background: rgba(248, 252, 253, 0.973);
+    padding: 2rem 0;
+    width: 16rem;
+    margin: 5rem .5rem;
+    transition: box-shadow .7s ease;
+}
+
+.site-main > .services-area .services:hover{
+    box-shadow: var(--box-shadow);
+}
+
+/* end services area */
+
+/* start project area 
+
+.site-main .project-area{
+    padding: 4rem 0;
+}
+
+.site-main .project-area .button-group button{
+    background: transparent;
+    border: none;
+    font: normal 500 16px/130px 'Roboto';
+    text-transform: uppercase;
+}
+
+.site-main .project-area .button-group button + button{
+    padding-left: 3rem;
+}
+
+.site-main .project-area .our-project > .title h4{
+    font: normal 700 25px/12px 'Roboto'; 
+}
+
+.site-main .project-area .our-project .img a:hover img{
+    filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
+}
+
+
+ end project area */
+
+/* start about me */
+
+.site-main .about-area .about-title p{
+    padding: 1rem 7rem;
+}
+
+.site-main .about-area .client{
+    background: #ffffff10;
+    box-shadow: var(--box-shadow);
+    margin: 3rem 0rem;
+}
+
+.site-main .about-area .client .client-img{
+    padding: 2rem;
+}
+
+.site-main .about-area .client .about-client{
+    padding-top: 2rem;
+}
+
+.site-main .about-area .client .about-client h4{
+    font: normal 500 21px/20px 'Roboto';
+}
+
+.site-main .about-area .client .about-client p{
+    font-size: 14px;
+}
+
+.site-main .about-area .owl-carousel .owl-item{
+    display: flex;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+
+.site-main .about-area .owl-carousel .owl-dots .owl-dot.active span{
+    background: var(--primary-color);
+    width: 12px;
+    height: 12px;
+}
+
+
+/* end about me */
+
+/* start subscibe me */
+
+.site-main .subscribe-us-area .subscribe{
+    background: url(../img/subscribe-bg.png) no-repeat;
+    padding: 10rem 0;
+    margin: 3rem auto;
+}
+
+.site-main .subscribe-us-area .subscribe .subscribe-title h4{
+    font: normal 700 30px/30px 'Roboto';
+    color: whitesmoke;
+}
+
+.site-main .subscribe-us-area .subscribe .subscribe-title p{
+    color: whitesmoke;
+    padding: 1rem 4rem;
+}
+
+.site-main .subscribe-us-area .subscribe form .input-textbox input{
+    width: 400px;
+    padding: 1.5rem 1rem;
+    border: 1px solid whitesmoke;
+    background: transparent;
+    color: whitesmoke;
+    font: normal 500 17px/20px 'Roboto';
+}
+
+.site-main .subscribe-us-area .subscribe form .input-textbox input::placeholder{
+    color: whitesmoke;
+}
+
+.site-main .subscribe-us-area .subscribe form .btn-submit button{
+    background: whitesmoke;
+    color: black;
+    padding: .7rem 2rem;
+}
+
+
+/*   x   Viewport less than or equal to 1130px    x   */
+
+/*      Viewport less than or equal to 750px       */
+
+@media only screen and (max-width: 750px){ /*changes the layout if less than or equal to 750px*/
+    .nav .nav-menu, .nav .nav-items{ 
+        flex-direction: column; /* change nav divs layout to vertical */
+    }
+
+    .nav .toggle-collapse{
+        display: initial; /* will show the menu icon */
+    }
+
+    .site-content{
+        grid-template-columns: 100%;
+    }
+
+    footer.footer.container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/*   x   Viewport less than or equal to 750px    x   */
+
+/*      Viewport less than or equal to 520px       */
+
+@media only screen and (max-width: 520px){
+    .blog{
+        height: 125vh;
+    }
+
+    .site-content .post-content > .post-image .post-info{
+        display: none;
+    }
+}
+
+/*    x  Viewport less than or equal to 520px    x   */

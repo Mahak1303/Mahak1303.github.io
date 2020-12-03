@@ -1,0 +1,110 @@
+
+
+/* CSS Variables */
+
+:root{
+    --primary-color: #4458dc;
+    --primary-color2: #854fee;
+    --title-color: #141313;
+    --text-color: #777777;  
+    --border-color: #201f1f17;  
+    --gradient-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+    --shadow-color:  0px 10px 30px rgba(118, 85, 225, 0.3);
+    --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+/* global classes */
+
+
+.title-text{
+    font: normal bold 50px/72px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-uppercase{
+    text-transform: uppercase;
+}
+
+/* buttons */
+
+.button{
+    padding: .8rem 2.2rem;
+    font: normal 500 16px/20px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 4px;
+}
+
+/* when you put .class1.class2 it means to select elements with both class1 and class2 */
+/* when you put .class1 .class2 it means to select elements with class2 that is a descendant of an element with class1 */
+/* when you put .class1 > .class2 it means select all .class2 elements where the parent is class1 */
+
+.button.primary-button{ /* why is it that i can't put a space between the two classes? */
+    background: var(--sky); /* button color */ 
+    background-clip: border-box;
+    color: whitesmoke;
+    transition: background .6s ease;
+    box-shadow: var(--box-shadow);
+    padding: 10;
+}
+
+.button.primary-button:hover{
+    background: whitesmoke;
+    /* in this case padding-box makes it so you can still see the gradient in the back using the ::after*/
+    background-clip: padding-box; /* lets you control how far back image or color extends beyond an element's padding or content */
+    color: black;
+}
+
+.button.primary-button::after, .button.secondary-button::after{ /* this is making a gradient border because it is basicall a box behind the button that stays there even when hovering*/
+    position: absolute;
+    top: -2px; left: -2px;
+    bottom: -2px; right: -2px;
+    background: var(--sky);
+    content: '';
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.button.secondary-button{
+    background: white;
+    background-clip: padding-box;
+    transition: background .6s ease;
+}
+
+.button.secondary-button:hover{
+    background: var(--sky);
+    color: whitesmoke;
+    box-shadow: var(--box-shadow);
+}
+
+p.para{
+    color: var(--text-color);
+    font: normal 500 16px/ 25px 'Roboto';
+}
+
+.font-roboto{
+    font-family: 'Roboto', font-family;
+}
+
+button:focus, button:active, button:hover, .btn:active, .btn.active{
+    outline: 0px !important;
+    box-shadow: none !important;
+}
+
+.title-h1{
+    font: normal bold 39px/40px 'Roboto';
+}
+
+.navbar_fixed{
+    position: fixed;
+    width: 100%;
+    top: -1px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    box-shadow: var(--box-shadow);
+    z-index: 999;
+    transition: background 1s ease;
+}

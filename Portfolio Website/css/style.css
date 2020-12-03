@@ -1,0 +1,628 @@
+/* import variables from variables.css file */
+@import url(./partials/variables.css); 
+
+
+
+/* global */
+@import url(./partials/global.css);
+
+/* ---------------- navbar ---------------- */
+
+.mainnav a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.mainnav ul{
+    list-style-type: none; /* makes the bullet points and other styles in the list go away */
+}
+
+
+.mainnav{
+    background: white;
+    padding: 0.2rem; /* rem stands for 'the root element's font-size' */
+    height: 0rem;
+    min-height: 10vh; /* this makes it so the nav section is atleast 40% of the viewport (visible area of a web page) height */
+    overflow: hidden; /* this makes sure that when the content overflows, it stayes hidden*/
+    transition: height 1s ease-in-out; /* makes the items in the toggle menu come with an effect */
+
+}
+
+.mainnav .mainnav-menu{
+    justify-content: space-between; /* spaces out the distance between the divs inside the nav-menue class equally */
+}
+
+.mainnav .maintoggle-collapse{
+    position: absolute; /* The element is positioned relative to its first positioned (not static) ancestor element */
+    top: 0%;
+    width: 90%;
+    cursor: pointer; /* changes the cursor style to pointer hand */
+    display: none; /* will hide the menu icon */
+}
+
+.mainnav .maintoggle-collapse .maintoggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.mainnav .maintoggle-collapse .maintoggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray)
+}
+
+.collapse{
+    height: 30rem !important;
+}
+
+.mainnav .mainnav-items{
+    display: flex;
+    margin: 0;
+
+}
+
+.mainnav .mainnav-items .mainnav-link{
+    padding: 1.6rem /* top and bottom */ 1rem; /* left and right */
+    font-size: 1.1rem;
+    position: relative; /* allow it to be adjusted away from its normal positions */ 
+    font-family: 'Abel', sans-serif;
+    font-size: 1.1rem;
+}
+
+.mainnav .mainnav-items .mainnav-link:hover{
+    background-color: #5077be;
+}
+
+.mainnav .mainnav-items .mainnav-link:hover a{
+    color: var(--white);
+}
+.mainnav .mainnav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block; /* makes the element display as a block; has somewhitespace and alowes no HTML element next to it unless declared */
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.6rem;
+}
+
+.mainnav .mainsocial{
+    padding: 1.4rem 0;
+}
+
+.mainnav .mainsocial i{
+    padding: 0.2rem;
+}
+
+.mainnav .mainsocial i:hover{
+    color: #a1c4cf;
+}
+
+.maintext-gray{
+    color: #3f4954;
+}
+
+.mainflex-row{
+    display: flex; /* this makes the display flex so we can use the flex properties and align all the properties horizontally*/
+    flex-direction: row; /* this makes the divs in the flex-row class all horizontal */
+    flex-wrap: wrap; /* this makes it so when you change the size of the page, thhe divs in the flex-row class will stick together and if they don't fit horizontally, they will go down */
+}
+
+/* --------x-------- navbar ---------x------- */
+
+/* banner area */
+
+.dancing{
+    padding: 50px;
+}
+
+.site-main .site-banner h3{
+    padding-top: 35%;
+    font-weight: 500;
+}
+
+.site-main .site-banner h3::after{ /*inserts the content text after whatever you select */
+    content: " ";
+    height: 2px;
+    width: 18vw;
+    background: black;
+    display: inline-block;
+    margin-left: 5%;
+    transform: translateY(-10px);
+}
+
+.site-main .site-banner .site-title h1{
+    font-size: 5rem;
+}
+
+.site-main .site-banner .site-title h4{
+    font-size: 1.5rem;
+}
+
+.site-main .site-banner .banner-image > img{
+    padding: 0rem 5rem;
+    width: 90rem;
+}
+
+
+.banner-image{
+    width: 550px;
+    height: auto;
+}
+
+/* end banner area */
+
+/* start about area */
+
+.site-main .about-area{
+    padding: 8rem 5rem;
+}
+
+.site-main .about-area .about-title h2 > span{
+    display: block;
+    font: normal bold 49px/ 60px 'Roboto';
+    letter-spacing: 21px;
+}
+
+.site-main .about-area .about-title .paragraph > p{
+    padding: .4rem 0;
+}
+
+/* end about area */
+
+/* services area */
+
+.fam-img{
+    width: 150px;
+    height: auto;
+}
+
+/* end services area */
+
+/* start brand area */
+
+.site-main .brand-area{
+    padding: 1rem 5rem; /* when I increase the rem, the distance decreases ?*/
+    margin-bottom: 4rem;
+}
+
+.site-main .brand-area .firstrow .col-lg-4{
+    display: flex;
+    justify-content: center;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand{ 
+    border: 1px solid var(--border-color);
+    text-align: center;
+    padding: 1.8rem 0rem;
+    margin: .9rem 0;  /* when I increase the rem, the distance decreases ?*/
+    width: 180px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform .4s ease;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand > img{
+    width: 50%;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand > img:hover{
+    transform: scale(1.3);
+    transition: transform .4s ease-out;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand:hover > img{
+    filter: brightness(0.15);
+}
+
+.site-main .brand-area .experience-area{
+    padding-left: 1rem;
+}
+
+.site-main .brand-area .experience-area span{
+    display: block;
+}
+
+.site-main .brand-area .experience-area .years-area{
+    background: url(../img/client-info-bg.png) no-repeat 45px 20px;
+    padding: 2rem 0;
+    width: 40rem;
+    height: 18rem;
+    padding-left: 8rem;
+    position: relative;
+}
+
+.site-main .brand-area .experience-area .bg-panel{
+    position: absolute;
+    left: -190px; top: 0%;
+    background: #e029290a;
+    width: 400px;
+    height: 400px;
+    margin-left: 340px;
+    z-index: -1;
+}
+
+.site-main .brand-area .experience-area .years-area .years{
+    font: normal bold 84px/40px 'Roboto';
+    color: var(--primary-color2);
+    z-index: 2;
+}
+
+.site-main .brand-area .experience-area .years-area h2 >span{
+    font: normal 600 22px/30px 'Roboto';
+}
+
+.site-main .brand-area .experience-area .call-area{
+    padding-left: 10rem;
+}
+
+/* end brand area */
+
+/* start services area */
+
+.site-main .services-area{
+    padding: 7rem 2rem;
+}
+
+.site-main .services-area .services-title{
+    padding: 0 14rem;
+}
+
+.site-main .services-area .services-title h1{
+    font-size: 35px;
+}
+
+.site-main > .services-area .services{
+    background: rgba(248, 252, 253, 0.973);
+    padding: 2rem 0;
+    width: 16rem;
+    margin: 5rem .5rem;
+    transition: box-shadow .7s ease;
+}
+
+.site-main > .services-area .services:hover{
+    box-shadow: var(--box-shadow);
+}
+
+/* end services area */
+
+/* start project area 
+
+.site-main .project-area{
+    padding: 4rem 0;
+}
+
+.site-main .project-area .button-group button{
+    background: transparent;
+    border: none;
+    font: normal 500 16px/130px 'Roboto';
+    text-transform: uppercase;
+}
+
+.site-main .project-area .button-group button + button{
+    padding-left: 3rem;
+}
+
+.site-main .project-area .our-project > .title h4{
+    font: normal 700 25px/12px 'Roboto'; 
+}
+
+.site-main .project-area .our-project .img a:hover img{
+    filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
+}
+
+
+ end project area */
+
+/* start about me */
+
+.site-main .about-area .about-title p{
+    padding: 1rem 7rem;
+}
+
+.site-main .about-area .client{
+    background: #ffffff10;
+    box-shadow: var(--box-shadow);
+    margin: 3rem 0rem;
+}
+
+.site-main .about-area .client .client-img{
+    padding: 2rem;
+}
+
+.site-main .about-area .client .about-client{
+    padding-top: 2rem;
+}
+
+.site-main .about-area .client .about-client h4{
+    font: normal 500 21px/20px 'Roboto';
+}
+
+.site-main .about-area .client .about-client p{
+    font-size: 14px;
+}
+
+.site-main .about-area .owl-carousel .owl-item{
+    display: flex;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+
+.site-main .about-area .owl-carousel .owl-dots .owl-dot.active span{
+    background: var(--primary-color);
+    width: 12px;
+    height: 12px;
+}
+
+
+/* end about me */
+
+/* start subscibe me */
+
+.site-main .subscribe-us-area .subscribe{
+    background: url(../img/subscribe-bg.png) no-repeat;
+    padding: 10rem 0;
+    margin: 3rem auto;
+}
+
+.site-main .subscribe-us-area .subscribe .subscribe-title h4{
+    font: normal 700 30px/30px 'Roboto';
+    color: whitesmoke;
+}
+
+.site-main .subscribe-us-area .subscribe .subscribe-title p{
+    color: whitesmoke;
+    padding: 1rem 4rem;
+}
+
+.site-main .subscribe-us-area .subscribe form .input-textbox input{
+    width: 400px;
+    padding: 1.5rem 1rem;
+    border: 1px solid whitesmoke;
+    background: transparent;
+    color: whitesmoke;
+    font: normal 500 17px/20px 'Roboto';
+}
+
+.site-main .subscribe-us-area .subscribe form .input-textbox input::placeholder{
+    color: whitesmoke;
+}
+
+.site-main .subscribe-us-area .subscribe form .btn-submit button{
+    background: whitesmoke;
+    color: black;
+    padding: .7rem 2rem;
+}
+
+/* end subscribe me */
+
+/* -------------- Footer --------------- */
+
+footer.footer{
+    height: 100%;
+    background: var(--bg-color);
+    position: relative;
+}
+
+footer.footer .container{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr); /* creates four equal with columns */
+}
+
+footer.footer .container > div{
+    flex-grow: 1; /* flex item can grow up to 1 */
+    flex-basis: 0; /*the inintial width of the flex item is 0 */
+    padding: 3rem .9rem;
+}
+
+footer.footer .container h2{
+    color: var(--white)
+}
+
+footer.footer .container .newsletter .form-element{
+    background: black;
+    display: inline-block;
+}
+
+footer.footer .container .newsletter .form-element input{
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: 'Josefin', sans-serif;
+    font-size: 1rem;
+    width: 74%;
+}
+
+footer.footer .newsletter .form-element i{
+    background: var(--sky);
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+
+footer.footer div.form-element{
+    font: 16px 'Times';
+}
+
+footer.footer .instagram div > img{
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
+
+footer.footer .follow div i{
+    color: var(--white);
+    padding: 0.4rem;
+}
+
+footer.footer .rights{
+    color: var(--white);
+    justify-content: center;
+    font-family: 'Times';
+    font-size: 16px !important; /* this code isn't working */
+}
+
+.flex-row{
+    display: flex; /* this makes the display flex so we can use the flex properties and align all the properties horizontally*/
+    flex-direction: row; /* this makes the divs in the flex-row class all horizontal */
+    flex-wrap: wrap; /* this makes it so when you change the size of the page, thhe divs in the flex-row class will stick together and if they don't fit horizontally, they will go down */
+}
+
+footer.footer .go-up i{
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    right: 6%;
+    top: 50%; 
+}
+
+footer.footer .go-up i:hover{
+    color: var(--text-gray);
+}
+
+:root{ /* these are how you create variables */
+    /* Theme colors */
+    --text-gray: #3f4954; /* these are hex colors */
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /* Gradient Color */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+}
+
+span{
+    font-family: 'Abel', sans-serif;
+}
+
+.footer .container{
+    margin: 0.5vw;
+}
+
+.footer .text-gray{
+    color: var(--text-gray);
+}
+
+.footer p{
+    font-family: 'Lexend', sans-serif;
+    color: var(--text-light);
+}
+
+@media only screen and (max-width: 1130px){
+
+    footer.footer .container{
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media only screen and (max-width: 750px){ 
+    
+    footer.footer.container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* --------x------ Footer -------x-------- */
+
+/* responsive */
+
+
+/* if the viewport is equal to 340px or less than that */ 
+@media only screen and (max-width: 340px){
+    .header_area .main-menu .navbar,
+    .header_area .main-menu .navbar .navbar-brand,
+    .site-main .subscribe-us-area .subscribe .subscribe-title,
+    .site-main .subscribe-us-area .subscribe .subscribe-title p, h4,
+    .site-main .services-area,
+    .site-main .subscribe-us-area .subscribe
+    {
+        padding: 2%;
+        margin: 0%;
+    }
+
+    .site-main .site-banner .site-title h1{
+        font-size: 41px;
+    }
+
+    .site-main .subscribe-us-area .subscribe form .input-textbox input{
+        width: 15rem    !important;
+    }
+
+    .site-main > .services-area .services{
+        width: 13rem;
+    }
+
+}
+
+
+/* if the viewport is equal to 340px or less than that */ 
+@media only screen and (max-width: 792px){
+    .site-main .about-area .about-title h2 > span{
+        font-size: 31px;
+        letter-spacing: 10px;
+    }
+
+    .site-main .brand-area .experience-area .years-area{
+        padding-left: 1%;
+        width: 49%;
+    }
+
+    .site-main .brand-area .experience-area .bg-panel{
+        margin-left: 30%;
+        width: 80%;   
+    }
+
+    .site-main .brand-area .experience-area .call-area{
+        padding-left: 3%;
+    }
+
+    .site-main .project-area .button-group button{
+        font: normal 500 18px/40px var(--roboto);
+    }
+
+    .site-main .about-area .about-title p{
+        padding: 0%;
+    }
+
+    .site-main .subscribe-us-area .subscribe form .input-textbox input{
+        width: 20rem;
+        margin: 5%;
+    }
+}
+
+/*      Viewport less than or equal to 750px       */
+
+@media only screen and (max-width: 750px){ /*changes the layout if less than or equal to 750px*/
+    .mainnav .mainnav-menu, .mainnav .mainnav-items{ 
+        flex-direction: column; /* change nav divs layout to vertical */
+    }
+
+    .mainnav .maintoggle-collapse{
+        display: initial; /* will show the menu icon */
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #dissapear{
+        display: none;
+    }
+}
+
+/* if the viewport is equal to 1910px or less than that */ 
+@media only screen and (max-width: 1910px){
+    .header_area .main-menu .navbar{
+        padding: 1rem;
+    }
+
+    .container{
+        max-width: 90%;
+    }
+
+    .site-main .brand-area,
+    .site-main .services-area .services-title,
+    .site-main .about-area{
+        padding: 3% 4%;
+    }
+}
